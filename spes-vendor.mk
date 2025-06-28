@@ -187,7 +187,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/spes/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
     vendor/xiaomi/spes/proprietary/vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc \
     vendor/xiaomi/spes/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc \
-    vendor/xiaomi/spes/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc \
     vendor/xiaomi/spes/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
     vendor/xiaomi/spes/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/xiaomi/spes/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
@@ -317,17 +316,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/spes/proprietary/vendor/firmware/scuba_ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/scuba_ipa_fws.mdt \
     vendor/xiaomi/spes/proprietary/vendor/firmware/st21nfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/st21nfc_fw.bin \
     vendor/xiaomi/spes/proprietary/vendor/firmware/st21nfc_fw7.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/st21nfc_fw7.bin \
-    vendor/xiaomi/spes/proprietary/vendor/lib/libsn100u_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsn100u_fw.so \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.alias:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.alias \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.dep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.dep \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.load:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/modules.softdep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.softdep \
     vendor/xiaomi/spes/proprietary/vendor/lib/modules/rdbg.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/rdbg.ko \
-    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_karaoke_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_karaoke_res.bin \
-    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_karaokemix_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_karaokemix_res.bin \
-    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_res.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_res.bin \
-    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_res_headphone.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_res_headphone.bin \
-    vendor/xiaomi/spes/proprietary/vendor/lib/rfsa/adsp/misound_res_spk.bin:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/misound_res_spk.bin \
     vendor/xiaomi/spes/proprietary/vendor/lib64/camera/com.qti.sensormodule.k7t_aac_gc02m1_macro_ii.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.k7t_aac_gc02m1_macro_ii.bin \
     vendor/xiaomi/spes/proprietary/vendor/lib64/camera/com.qti.sensormodule.k7t_aac_gc08a3_ultra_i.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.k7t_aac_gc08a3_ultra_i.bin \
     vendor/xiaomi/spes/proprietary/vendor/lib64/camera/com.qti.sensormodule.k7t_aac_s5k3l6_front_ii.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.k7t_aac_s5k3l6_front_ii.bin \
@@ -438,7 +431,6 @@ PRODUCT_PACKAGES += \
     libCB \
     libOpenCL \
     libVkLayer_q3dtools \
-    libadreno_app_profiles \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
@@ -458,7 +450,6 @@ PRODUCT_PACKAGES += \
     libllvm-qgl \
     libmdsprpc \
     libmmosal_vendor \
-    libqcci_legacy \
     libqcmaputils \
     libqdi \
     libqdp \
@@ -479,6 +470,7 @@ PRODUCT_PACKAGES += \
     libsdsprpc \
     libswvdec \
     libsysmon_cdsp_skel \
+    libcacertclient \
     libthermalclient \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.fingerprint@1.0 \
@@ -505,7 +497,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcDec \
     libOmxG711Dec \
     libOmxMpeghDecSw \
-    libOmxMpeghEncSw \
     libOmxQcelp13Dec \
     libOmxSwVdec \
     libOmxSwVencMpeg4 \
@@ -567,8 +558,6 @@ PRODUCT_PACKAGES += \
     libwfduibcinterface_proprietary \
     libwfduibcsink_proprietary \
     libwfduibcsinkinterface_proprietary \
-    libwfduibcsrc_proprietary \
-    libwfduibcsrcinterface_proprietary \
     libwfdutils_proprietary \
     libasphere \
     libmisoundfx \
@@ -722,7 +711,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qteeconnector@1.0-impl \
     vendor.qti.hardware.sensorscalibrate@1.0-impl \
     vendor.qti.hardware.soter@1.0-impl \
-    vendor.xiaomi.hardware.displayfeature@1.0-impl \
     lib-imscmservice \
     lib-imsdpl \
     lib-imsqimf \
@@ -741,7 +729,6 @@ PRODUCT_PACKAGES += \
     libGPreqcancel \
     libGPreqcancel_svc \
     libHalSuperSensorServer \
-    libI420colorconvert \
     libQSEEComAPI \
     libQTEEConnector_listener \
     libQTEEConnector_vendor \
@@ -767,7 +754,6 @@ PRODUCT_PACKAGES += \
     libbtnv \
     libc++_shared \
     libc++_shared_vf \
-    libcacertclient \
     libcamera_nn_stub \
     libcamera_scene \
     libcamerapostproc \
@@ -839,15 +825,12 @@ PRODUCT_PACKAGES += \
     liblqe \
     libmctfengine_stub \
     libmdmdetect \
-    libmfido \
     libmiai_supernight \
     libmialgoengine \
     libmibokeh_712 \
     libmifpext \
     libminkdescriptor \
     libminksocket \
-    libmlipay \
-    libmlipay@1.1 \
     libmmcamera_cac3 \
     libmmcamera_faceproc \
     libmmcamera_faceproc2 \
@@ -867,7 +850,6 @@ PRODUCT_PACKAGES += \
     libofflinelog \
     libopencv \
     libopestriping \
-    libops \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
@@ -938,8 +920,6 @@ PRODUCT_PACKAGES += \
     libxmi_high_dynamic_range \
     libxml \
     libxtadapter \
-    libxtwifi_server_protocol \
-    libxtwifi_server_protocol_uri_v3 \
     libwvdrmengine \
     nfc_nci.st21nfc.st \
     qcrild_librilutils \
@@ -1043,8 +1023,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency@2.1 \
     vendor.qti.qspmhal@1.0-impl \
     vendor.qti.qspmhal@1.0 \
-    vendor.xiaomi.hardware.mfidoca@1.0 \
-    vendor.xiaomi.hardware.mtdservice@1.3 \
     capi_v2_aptX_CLHDADV_Encoder \
     capi_v2_aptX_CLHDAD_Speech_Decoder \
     capi_v2_aptX_Classic \
@@ -1063,6 +1041,11 @@ PRODUCT_PACKAGES += \
     libscveT2T_skel \
     libsns_device_mode_skel \
     libsns_low_lat_stream_skel \
+    misound_karaoke_res \
+    misound_karaokemix_res \
+    misound_res \
+    misound_res_headphone \
+    misound_res_spk \
     com.qualcomm.qti.dpm.api@1.0 \
     libdpmctmgr \
     libdpmfdmgr \
@@ -1072,7 +1055,6 @@ PRODUCT_PACKAGES += \
     libmmparser_lite \
     libmmrtpdecoder \
     libmmrtpencoder \
-    libwfdclient \
     com.qualcomm.qti.wifidisplayhal@1.0 \
     libwfdavenhancements \
     libwfdcommonutils \
@@ -1082,13 +1064,9 @@ PRODUCT_PACKAGES += \
     libwfdmmsink \
     libwfdmmsrc_system \
     libwfdrtsp \
-    libwfdservice \
-    libwfdsinksm \
     libwfduibcinterface \
     libwfduibcsink \
     libwfduibcsinkinterface \
-    libwfduibcsrc \
-    libwfduibcsrcinterface \
     vendor.qti.hardware.wifidisplaysession@1.0 \
     fm_helium \
     lib-imsvideocodec \
@@ -1099,7 +1077,6 @@ PRODUCT_PACKAGES += \
     libfm-hci \
     libimscamera_jni \
     libimsmedia_jni \
-    libwfdnative \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.fm@1.0 \
     vendor.qti.imsrtpservice@3.0 \
@@ -1143,7 +1120,6 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.2-service.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
-    manifest_vendor.xiaomi.hardware.mtdservice.xml \
     vendor.qti.gnss@4.0-service.xml \
     ATFWD-daemon \
     STFlashTool \
@@ -1176,7 +1152,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.sensorscalibrate@1.0-service \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
-    vendor.xiaomi.hardware.displayfeature@1.0-service \
     ims_rtp_daemon \
     imsdatadaemon \
     imsqmidaemon \
@@ -1218,7 +1193,6 @@ PRODUCT_PACKAGES += \
     wfdvndservice \
     wifidisplayhalservice \
     xtra-daemon \
-    xtwifi-client \
     xtwifi-inet-agent \
     dpmd \
     wfdservice
