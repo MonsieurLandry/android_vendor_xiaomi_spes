@@ -12117,6 +12117,18 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.nfc@1.2-service.st",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service.st"],
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libbase",
+        // Add any other needed shared libs, inspect with `strings` or `readelf -d`
+    ],
+    vendor: true,
+}
+
+cc_prebuilt_binary {
 	name: "ATFWD-daemon",
 	owner: "xiaomi",
 	target: {
@@ -12857,25 +12869,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "mlipayd@1.1",
-	owner: "xiaomi",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/mlipayd@1.1"],
-			shared_libs: ["vendor.xiaomi.hardware.mlipay@1.0", "vendor.xiaomi.hardware.mlipay@1.1", "vendor.xiaomi.hardware.mtdservice@1.0", "liblog", "libcutils", "libutils", "libQSEEComAPI", "libhidlbase", "libhidltransport", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	allow_undefined_symbols: true,
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
 	name: "msm_irqbalance",
 	owner: "xiaomi",
 	target: {
@@ -13290,23 +13283,6 @@ cc_prebuilt_binary {
 		android_arm: {
 			srcs: ["proprietary/vendor/bin/wfdvndservice"],
 			shared_libs: ["libutils", "liblog", "libbinder", "libwfdhdcpservice_proprietary", "libavservices_minijail", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "32",
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
-	name: "wifidisplayhalservice",
-	owner: "xiaomi",
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/bin/wifidisplayhalservice"],
-			shared_libs: ["vendor.qti.hardware.wifidisplaysession@1.0", "vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl", "libhidlbase", "libutils", "liblog", "libbinder", "libavservices_minijail", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "32",
