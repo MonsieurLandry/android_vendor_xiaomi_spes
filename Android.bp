@@ -12117,6 +12117,28 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.media.omx@1.0-service",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.media.omx@1.0-service"],
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libbase",
+        "libbinder",
+        "libutils",
+        "libhidlbase",
+        "libhidltransport",
+        "libstagefright_omx",
+        "libstagefright_xmlparser",
+        "libavservices_minijail",
+        "android.hardware.media.omx@1.0",
+        "android.hidl.memory@1.0",
+        "libc++",
+    ],
+    vendor: true,
+	allow_undefined_symbols: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.nfc@1.2-service.st",
     srcs: ["proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service.st"],
     shared_libs: [

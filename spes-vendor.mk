@@ -498,6 +498,19 @@ PRODUCT_PACKAGES += \
     libOmxAmrDec \
     libOmxAmrwbplusDec \
     libOmxApeDec \
+    libOmxCore \
+    libOmxVenc \
+    libOmxVdec \
+    libstagefright_omx \
+    libstagefright_omx_utils \
+    libstagefright_softomx \
+    libstagefright_softomx_plugin \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    android.hardware.media.omx@1.0 \
     libOmxApeDecSw \
     libOmxDsdDec \
     libOmxEvrcDec \
